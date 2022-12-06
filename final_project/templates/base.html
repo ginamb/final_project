@@ -20,11 +20,11 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-       {%if user.is_authenticated %}
+
 <!--      Cat_menu drop down list items-->
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-
+  {%if user.is_authenticated %}
       {% if cat_menu %}
        <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -48,13 +48,13 @@
            <a class="nav-link" href="{%url 'logout'%}">Logout</a>
          </li>
       {% else %}
-        <li class="nav-item">
+<!--        <li class="nav-item">-->
           <a class="nav-link" href="{%url 'register'%}">Register</a>
-        </li>
+<!--        </li>-->
 
-        <li class="nav-item">
+<!--        <li class="nav-item">-->
           <a class="nav-link" href="{%url 'login'%}">Login</a>
-        </li>
+<!--        </li>-->
 
       {% endif %}
 <!--      <li class="nav-item active">-->

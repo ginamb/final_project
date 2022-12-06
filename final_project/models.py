@@ -22,6 +22,7 @@ class Post(models.Model):
     body = RichTextField(blank=True,null=True)
     # body =models.TextField()
     category = models.CharField(max_length=250, default='uncategorized')
+    image = models.ImageField(null=True, blank = True,upload_to="images/" )
 
     def __str__(self):
         return self.title + ' | ' + str(self.author)
